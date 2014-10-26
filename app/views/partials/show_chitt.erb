@@ -1,0 +1,14 @@
+<section class="chitters">
+	<% @chitters.each do | chitt | %>
+		<div class="chitt">
+			<img src="/images/twitty.jpg" alt="chitter bird">
+			<ul>
+				<li class="info_user"><%= chitt.name %> @<span> <%= chitt.user_name %></span> </li>
+				<li class="info_chit"> <%= chitt.content %></li>
+				<li> Chitted at <%= format_time(chitt.at_time)%></li>
+			</ul>
+		</div>
+	<% end %>	
+
+</section>
+

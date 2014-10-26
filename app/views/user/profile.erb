@@ -1,0 +1,20 @@
+<section class="profile">
+	<nav class="nav_profile">
+		<h1> <%= @user.user_name%> </h1>
+			
+		<form action="/user/profile" method="post">
+				
+			<input type="hidden" method="_delete">
+			<button type="submit">Sign Out</button>
+		</form>
+
+	</nav>
+
+		<form action="/user/profile" method="post" class="post_chitt">
+			<textarea name="content" cols="40" rows="3"></textarea>
+			<button type="submit">Chitt</button>
+		</form>
+
+	<%= partial :"/partials/show_chitt" %>
+
+</section>
